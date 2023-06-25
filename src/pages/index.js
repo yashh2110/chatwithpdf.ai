@@ -400,37 +400,43 @@ export default function Home() {
                     </Box>
                   ))}
                 </Box>
-                <Box
-                  position={"absolute"}
-                  width={"90%"}
-                  bottom={"5vh"}
-                  left={"5%"}
-                  mx={"auto"}
-                  backgroundColor={"var(--primary-background-color)"}
-                  boxShadow={"lg"}
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    sendMessage(question);
+                  }}
                 >
-                  <Input
-                    height={"50px"}
-                    width={"85%"}
-                    border="none"
-                    outline={"none"}
-                    value={question}
-                    onChange={(e) => setQuestion(e.target.value)}
+                  <Box
+                    position={"absolute"}
+                    width={"90%"}
+                    bottom={"5vh"}
+                    left={"5%"}
+                    borderRadius={"7px"}
+                    mx={"auto"}
                     backgroundColor={"var(--primary-background-color)"}
-                    _focus={{ outline: "none" }}
-                    placeholder="Ask any question related to this PDF.."
-                  />
-                  <IconButton
-                    height={"50px"}
-                    w={"15%"}
-                    isDisabled={!question}
-                    onClick={() => {
-                      sendMessage(question);
-                    }}
-                    variant={"ghost"}
-                    icon={<Icon as={AiOutlineSend} boxSize={5} />}
-                  />
-                </Box>
+                    boxShadow={"lg"}
+                  >
+                    <Input
+                      height={"50px"}
+                      width={"85%"}
+                      border="none"
+                      outline={"none"}
+                      value={question}
+                      onChange={(e) => setQuestion(e.target.value)}
+                      backgroundColor={"var(--primary-background-color)"}
+                      _focus={{ outline: "none" }}
+                      placeholder="Ask any question related to this PDF.."
+                    />
+                    <IconButton
+                      height={"50px"}
+                      w={"15%"}
+                      type="submit"
+                      isDisabled={!question}
+                      variant={"ghost"}
+                      icon={<Icon as={AiOutlineSend} boxSize={5} />}
+                    />
+                  </Box>
+                </form>
               </Box>
             </Box>
           </Box>
