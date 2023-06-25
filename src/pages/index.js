@@ -15,7 +15,7 @@ import Faq from "@/components/faq/Faq";
 import SeoTable from "@/components/seo/SeoTable";
 import ContentBlock from "@/components/content-block/ContentBlock";
 import Footer from "@/components/footer/Footer";
-import Header from "@/components/header/Header";
+
 import logo from "@/assets/png/logo.png";
 import { useEffect, useRef, useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
@@ -36,11 +36,17 @@ import {
 } from "@/services/apis";
 import Image from "next/image";
 import { toast } from "react-hot-toast";
+import DeropzoneSkeleton from "@/components/dropzone/DeropzoneSkeleton";
+import HeaderSkeleton from "@/components/header/HeaderSkeleton";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 const Dropzone = dynamic(() => import("@/components/dropzone/Dropzone"), {
   ssr: false,
+  loading: () => <DeropzoneSkeleton />,
 });
-
+const Header = dynamic(() => import("@/components/header/Header"), {
+  ssr: false,
+  loading: () => <HeaderSkeleton />,
+});
 export default function Home() {
   const [fileId, setFileId] = useState(null);
   const [selectedFile, setSelectedFile] = useState();
