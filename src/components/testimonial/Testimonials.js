@@ -39,8 +39,8 @@ function Testimonials({ styles }) {
   return (
     <Box
       minH="60vh"
-      backgroundColor="var(--primary-background-color)"
-      // backgroundColor="var(--secondary-background-color)"
+      // backgroundColor="var(--primary-background-color)"
+      backgroundColor="var(--secondary-background-color)"
       display="flex"
       justifyContent="center"
       alignItems="center"
@@ -58,20 +58,19 @@ function Testimonials({ styles }) {
           letterSpacing={"0.01em"}
           textAlign={["center", "center", "center"]}
         >
-          Hear from Our Satisfied Users
+          Trust People like You
         </Heading>
         <Text
           mt={"20px"}
           mx={"auto"}
           textAlign={["center", "center", "center"]}
-          w={["100%", "100%", "80%"]}
+          maxW={["90%", "70%", "60%"]}
           fontSize={"17px"}
           letterSpacing={"0.01em"}
           lineHeight={"27px"}
         >
-          Don't just take our word for it. Listen to our satisfied users'
-          experiences with our paraphrasing tool. From students to
-          professionals, our tool has benefited people from diverse fields.
+          Don't just take our word for it. Here's what some of our users have to
+          say about their experience with Chat PDF:
         </Text>
         <Box position={"relative"} w="100%" mt="20px" py={"5px"}>
           <Box

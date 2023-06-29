@@ -4,7 +4,7 @@ import TurnedInNotIcon from "@mui/icons-material/TurnedInNot";
 import { toast } from "react-hot-toast";
 import InfoIcon from "@mui/icons-material/Info";
 import { TwitterIcon, TwitterShareButton } from "next-share";
-import { Button } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 
 function Footer() {
   const addBookmark = (
@@ -33,15 +33,16 @@ function Footer() {
     }
   };
   return (
-    <div className="footer_container">
+    <Box className="footer_container" w={["100%"]}>
       <div className="footer_layout">
         <div className="footer_menu">
           <div className="footer_sub_container_1">
             <p className="footer_heading">
-              <b>PARAPHRASINGTOOL.APP</b>
+              <b>CHATWITHPDF.AI</b>
             </p>
             <span className="footer_sub_head">
-              Go to website for free sentence and paragraph paraphrasing.
+              Unleash the Power of AI to Chat with Your PDFs and Extract
+              Valuable Insights Like Never Before
             </span>
             {/* <div className="footer_social_share">
               <p className="footer_heading">
@@ -108,7 +109,7 @@ function Footer() {
               </p>
               <p className="footer_sub_head">Need help or have a question?</p>
               <p className="footer_sub_head">
-                Contact us at: hello@paraphrasingtool.app
+                Contact us at: hello@chatwithpdf.ai
               </p>
             </div>
           </div>
@@ -309,10 +310,10 @@ function Footer() {
         }}
       >
         <div className="footer_layout">
-          <p className="copyrights">Copyright © 2023 Paraphrasingtool.app</p>
+          <p className="copyrights">Copyright © 2023 ChatWithPDF.AI</p>
         </div>
       </div>
-    </div>
+    </Box>
   );
 }
 

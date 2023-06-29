@@ -38,6 +38,10 @@ import Image from "next/image";
 import { toast } from "react-hot-toast";
 import DeropzoneSkeleton from "@/components/dropzone/DeropzoneSkeleton";
 import HeaderSkeleton from "@/components/header/HeaderSkeleton";
+import Section1 from "@/components/section1/Section1";
+import Features from "@/components/features/Features";
+import Testimonials from "@/components/testimonial/Testimonials";
+import { features1, features2, features3 } from "@/data/common";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 const Dropzone = dynamic(() => import("@/components/dropzone/Dropzone"), {
   ssr: false,
@@ -464,7 +468,23 @@ export default function Home() {
                 loading={loading}
               />
             </Box>
-            <ContentBlock
+            <Section1
+              title={"ChatWithPDF.AI: Revolutionize Your PDF Interactions"}
+              paraghraph={
+                "Humanize the text 'Introducing Chat PDF: revolutionizing PDF interaction. With this innovative tool, you can communicate with your digital documents. Ask questions, extract key data, and gain unprecedented insights. It's your personal PDF assistant, delivering information at your fingertips!'"
+              }
+            />
+            <Features
+              cardType="1"
+              theme={"secondary"}
+              data={features1}
+              featureTitle={"Why Choose Chat PDF Over Others?"}
+              subTitle={
+                "In the digital age, numerous tools allow you to interact with PDFs. However, none offer the unique features and benefits of Chat PDF. Here's why Chat PDF stands out from the crowd:"
+              }
+            />
+
+            {/* <ContentBlock
               theme="secondary"
               titleFormat="h1"
               titleFontSize={["32px"]}
@@ -473,140 +493,64 @@ export default function Home() {
                 "Paraphrasing Tool addresses and simplifies your message. As writing deman standards continue to evolve in the digital landscape, there is an escalating need for practical solutions. At Paraphrasing Tool, we aim to radically revolutionize your writing experience by helping you transform the text into clear, compelling, and 100% original content",
                 "Creating unique and engaging content is vital to carve out a niche in the crowded digital space. Our tool is designed to make this task less overwhelming, allowing you to focus on what truly matters—delivering value through your content.",
               ]}
-            />
-            <SeoTable />
-            <ContentBlock
-              theme="secondary"
-              titleFormat="h2"
-              titleFontSize={["28px"]}
-              titleLineHeight={"42px"}
-              title={"No Word Limit: Embrace the Freedom of Expression"}
-              content={[
-                "Unlike other tools that restrict the volume of words you can paraphrase at once, our tool values your freedom of expression. It invites you to paraphrase a sentence, a paragraph, or an entire article without constraints. This liberating feature allows you to work without limitations, enhancing your productivity.",
-              ]}
-            />
+            /> */}
+
             <ContentBlock
               // theme="secondary"
               titleFormat="h2"
               titleFontSize={["28px"]}
               titleLineHeight={"42px"}
-              title={"AI-Powered: Harness the Power of Advanced Technology"}
+              title={"Chat PDF: A Tool for Everyone"}
               content={[
-                "Our paraphrasing tool is powered by cutting-edge AI technology. This isn't a basic word replacement tool—it comprehends the context of your text and rewrites it while maintaining the essence and context. This level of sophistication ensures your content is not just unique but also meaningful and coherent.",
+                "Chat PDF is designed to cater to a wide range of users. Whether you're a researcher, dealing with business contracts, or a student, Chat PDF can help you extract valuable insights from your PDFs.",
+              ]}
+              listItems={[
+                <p>
+                  <b>Students</b>
+                  <br /> Understanding and retaining information from textbooks
+                  and research papers is crucial but tedious for students. Chat
+                  PDF allows you to interact with your study materials, prepare
+                  notes efficiently, and understand the content better. Ask your
+                  PDF about complex concepts, definitions, or theories, and get
+                  easy-to-understand answers. With Chat PDF, studying becomes a
+                  breeze.
+                </p>,
+                <p>
+                  <b>Business Pros</b>
+                  <br /> Navigating business contracts can be a complex task.
+                  With Chat PDF, you can extract key points, simplify complex
+                  terms, and understand contracts better. Ask your PDF about
+                  specific clauses, obligations, or terms, and get clear,
+                  concise answers. With Chat PDF, reviewing contracts has never
+                  been easier.
+                </p>,
+                <p>
+                  <b>Researchers</b>
+                  <br /> As a researcher, you're often dealing with dense,
+                  information-packed PDFs. Chat PDF lets you quickly uncover
+                  more profound insights and turbocharge your research. Ask your
+                  PDF exact questions, extract key data, and gain insights
+                  swiftly and efficiently. With Chat PDF, you can focus on your
+                  research while we take care of the information extraction.
+                </p>,
               ]}
             />
-            <ContentBlock
-              theme="secondary"
-              titleFormat="h2"
-              titleFontSize={["28px"]}
-              titleLineHeight={"42px"}
-              title={"Plagiarism-Free: Maintain Your Credibility"}
-              content={[
-                "Our tool assists you in generating unique content that effortlessly passes plagiarism checks. This crucial feature allows you to uphold your credibility, an essential factor in building trust with your audience.",
-              ]}
+
+            <Testimonials />
+            <Features
+              cardType="2"
+              data={features3}
+              featureTitle={"How Does Chat PDF Work?"}
+              subTitle={"Using Chat PDF is as easy as 1-2-3:"}
             />
-            <ContentBlock
-              // theme="secondary"
-              titleFormat="h2"
-              titleFontSize={["28px"]}
-              titleLineHeight={"42px"}
-              title={
-                "User-Friendly Interface: Simplicity is the Ultimate Sophistication"
+            <Features
+              cardType="1"
+              theme={"secondary"}
+              data={features2}
+              featureTitle={"Features of Chat PDF"}
+              subTitle={
+                "Chat PDF is packed with unique features that make it so good. Here are some of them:"
               }
-              content={[
-                "Our tool's design hinges on simplicity. It doesn't require special skills to navigate. It's as easy as pasting your text, clicking 'Paraphrase,' and letting our AI do the rest. This simplicity ensures a seamless user experience, making the process of creating unique content enjoyable.",
-              ]}
-            />
-
-            <ContentBlock
-              theme="secondary"
-              titleFormat="h2"
-              titleFontSize={["28px"]}
-              titleLineHeight={"42px"}
-              title={"Free to Use: Quality Doesn't Have to Be Expensive"}
-              content={[
-                "Yes, it's true! Our tool is absolutely free to use.",
-                "We firmly believe in democratizing access to quality paraphrasing tools. We don't want your budget to stand in the way of your ability to produce high-quality, unique content.",
-              ]}
-            />
-            <ContentBlock
-              // theme="secondary"
-              titleFormat="h2"
-              titleFontSize={["28px"]}
-              titleLineHeight={"42px"}
-              title={"How Paraphrasing Tool Works?"}
-              content={[
-                "Utilizing our paraphrasing tool is a cakewalk. Here's a detailed breakdown of the three steps involved:",
-              ]}
-              listItems={[
-                <p>
-                  <b>Enter Your Text:</b> Copy and paste your chosen text into
-                  our paraphrasing tool. It could be a single sentence or
-                  multiple paragraphs. Our tool is designed to handle it all.
-                </p>,
-                <p>
-                  <b>Choose Your Preferred Paraphrasing Mode:</b> We understand
-                  that not all texts require the same level of paraphrasing.
-                  Therefore, we provide different paraphrasing modes (Standard,
-                  Simplify, Formal, Summarise) that you can pick from, depending
-                  on your specific needs.
-                </p>,
-                <p>
-                  <b>Hit 'Paraphrase':</b> Once you've set your preferences, all
-                  that's left is to click 'Paraphrase'. Our advanced AI will
-                  swiftly kick into action, analysing your text and generating a
-                  unique, high-quality version. The output isn't a random
-                  replacement of words but a well-composed piece that maintains
-                  the context and meaning of your original text.
-                </p>,
-              ]}
-            />
-
-            {/* <Testimonials /> */}
-            <ContentBlock
-              theme="secondary"
-              titleFormat="h2"
-              titleFontSize={["28px"]}
-              titleLineHeight={"42px"}
-              title={"A Tool for All: Catering to a Wide User Spectrum"}
-              content={[
-                "Our Free Online Paraphraser is designed with a diverse user base in mind, accommodating the unique needs of:",
-              ]}
-              listItems={[
-                <p>
-                  <b>Students:</b> Whether you're crafting an argumentative
-                  essay or a detailed research paper, our tool can help you
-                  paraphrase your text to avoid plagiarism and improve your
-                  writing. It allows you to express your ideas in a new light,
-                  adding depth to your academic papers.
-                </p>,
-                <p>
-                  <b>Researchers:</b> Our tool serves as a valuable companion in
-                  decoding and paraphrasing complex scientific text, making it
-                  more understandable and engaging. This helps in effectively
-                  communicating intricate research findings to a broader
-                  audience.
-                </p>,
-                <p>
-                  <b>Content Writers and Copywriters:</b> Facing writer's block?
-                  Need to freshen up your content? Our tool can help you
-                  overcome these challenges, help you bring fresh perspectives
-                  to your content, and keep it exciting and engaging for your
-                  readers.
-                </p>,
-                <p>
-                  <b>Digital Marketers:</b> Our tool aids you in creating unique
-                  and engaging content for your marketing campaigns. Our tool
-                  ensures that your brand's message stands out in the crowded
-                  digital marketplace.
-                </p>,
-                <p>
-                  <b>Bloggers:</b> As a blogger, you must constantly churn out
-                  fresh and unique content to keep your readers hooked. Our
-                  paraphrasing tool can aid in this process, helping you
-                  maintain reader interest and engagement.
-                </p>,
-              ]}
             />
             <Faq />
             <ContentBlock
@@ -619,6 +563,7 @@ export default function Home() {
                 "Feel free to reach out to us with any queries, comments, or feedback. Your thoughts are valuable to us, and we would love to hear from you. We're committed to helping you revolutionize your writing experience.",
               ]}
             />
+            <Footer />
           </Box>
         )}
       </main>
