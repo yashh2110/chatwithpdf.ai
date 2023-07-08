@@ -8,10 +8,10 @@ function Terms() {
   return (
     <>
       <Head>
-        <title>Terms and Conditions | ParaphrasingTool.APP</title>
+        <title>Terms and Conditions | ChatWithPDF.AI</title>
         <meta
           name="description"
-          content="Terms and Condition of ParaphrasingTool.APP"
+          content="Terms and Condition of ChatWithPDF.AI"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -29,10 +29,10 @@ function Terms() {
               website{" "}
               <Link
                 className={styles.link_style}
-                href="https://paraphrasingtool.app"
+                href="https://chatwithpdf.ai"
                 rel="noreferrer"
               >
-                https://paraphrasingtool.app
+                https://chatwithpdf.ai
               </Link>
               . We offers this website, including all information, tools and
               services available from this site to you, the user, conditioned
@@ -310,7 +310,7 @@ function Terms() {
           py={1}
           title={"SECTION 20 – CONTACT INFORMATION"}
           content={[
-            "Questions about the Terms of Service should be sent to us at hello@paraphrasingtool.app",
+            "Questions about the Terms of Service should be sent to us at hello@chatwithpdf.ai",
           ]}
         />
       </>

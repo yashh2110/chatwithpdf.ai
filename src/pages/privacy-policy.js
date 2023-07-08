@@ -13,11 +13,8 @@ function privacyPolicy() {
   return (
     <>
       <Head>
-        <title>Privacy Policy | ParaphrasingTool.APP</title>
-        <meta
-          name="description"
-          content="Privacy policy of ParaphrasingTool.APP"
-        />
+        <title>Privacy Policy | ChatWithPDF.AI</title>
+        <meta name="description" content="Privacy policy of ChatwithPDF.AI" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -32,11 +29,8 @@ function privacyPolicy() {
             <>
               This Privacy Policy describes how your personal information is
               collected, used, and shared when you visit or make a purchase from{" "}
-              <a
-                className={styles.link_style}
-                href="https://paraphrasingtool.app"
-              >
-                https://paraphrasingtool.app
+              <a className={styles.link_style} href="https://chatwithpdf.ai">
+                https://chatwithpdf.ai
               </a>{" "}
               (the “Site”).
             </>,
@@ -255,7 +249,7 @@ function privacyPolicy() {
           titleLineHeight={"42px"}
           title={"CONTACT US"}
           content={[
-            "For more information about our privacy practices, if you have questions, or if you would like to make a complaint, please contact us by e-mail at hello@paraphrasingtool.app ",
+            "For more information about our privacy practices, if you have questions, or if you would like to make a complaint, please contact us by e-mail at hello@chatwithpdf.ai ",
           ]}
         />
       </>

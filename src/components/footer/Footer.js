@@ -125,13 +125,13 @@ function Footer() {
             >
               Contact
             </Link> */}
-            <Link
+            {/* <Link
               href="/about/"
               rel="noreferrer"
               className="footer_menu_item footer_sub_head"
             >
               About Us
-            </Link>
+            </Link> */}
             {/* <Link
               href="/articles/"
               target="_blank"

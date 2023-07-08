@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Box, Button, Input, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import { uploadFileService } from "@/services/apis";
-
+import { Spinner } from "@chakra-ui/react";
 const getColor = (props) => {
   if (props.isDragAccept) {
     return "#00e676";
@@ -49,41 +49,66 @@ function Dropzone({ selectedFile, setSelectedFile, loading, uploadFile }) {
       onDrop: (acceptedFiles) => {
         console.log(acceptedFiles);
         setSelectedFile(acceptedFiles[0]);
+        uploadFile(acceptedFiles[0]);
       },
     });
 
   return (
-    <Box pb={10} pt={5}>
+    <Box pb={5} pt={5}>
       <Container {...getRootProps({ isFocused, isDragAccept, isDragReject })}>
-        <input {...getInputProps()} />
-        {selectedFile?.name ? (
-          <>
-            <Text fontWeight={"bold"} mb={3}>
-              Selected File
+        {loading ? (
+          <Box
+            w={"100%"}
+            h={100}
+            display={"flex"}
+            flexDirection={"column"}
+            justifyContent={"center"}
+            alignItems={"center"}
+          >
+            <Text
+              fontSize={"17px"}
+              fontWeight={"semibold"}
+              display={"flex"}
+              alignItems={"center"}
+              gap={"20px"}
+            >
+              <Spinner color="var(--primary-color)" /> {loading}
             </Text>
-            <Text>{selectedFile?.name}</Text>
-          </>
+          </Box>
         ) : (
           <>
-            <Box w={["80px", "90px", "100px"]} h={"auto"}>
-              <Image src={upload} alt="fu" />
-            </Box>
-            <Text fontWeight={"bold"} mt={3}>
-              Drop PDF here
+            <input {...getInputProps()} />
+            {selectedFile?.name ? (
+              <>
+                <Text fontWeight={"bold"} mb={3}>
+                  Selected File
+                </Text>
+                <Text>{selectedFile?.name}</Text>
+              </>
+            ) : (
+              <>
+                <Box w={["80px", "90px", "100px"]} h={"auto"}>
+                  <Image src={upload} alt="fu" />
+                </Box>
+                <Text fontWeight={"bold"} mt={3}>
+                  Drop PDF here
+                </Text>
+              </>
+            )}
+            <Text
+              mt={3}
+              color={"#146AE2"}
+              textDecoration={"underline"}
+              fontWeight={"semibold"}
+              cursor={"pointer"}
+            >
+              Browse my computer
             </Text>
           </>
         )}
-        <Text
-          mt={3}
-          color={"#146AE2"}
-          textDecoration={"underline"}
-          fontWeight={"semibold"}
-          cursor={"pointer"}
-        >
-          Browse my computer
-        </Text>
       </Container>
-      <Box
+
+      {/* <Box
         justifyContent={["center", "center", "space-between"]}
         display={"flex"}
         alignItems={"center"}
@@ -132,7 +157,7 @@ function Dropzone({ selectedFile, setSelectedFile, loading, uploadFile }) {
         >
           Search
         </Button>
-      </Box>
+      </Box> */}
     </Box>
   );
 }

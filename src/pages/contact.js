@@ -7,8 +7,8 @@ function Contact() {
   return (
     <>
       <Head>
-        <title>Contact Us | ContentDetector.AI</title>
-        <meta name="description" content="Contact ContentDetector.AI" />
+        <title>Contact Us | ChatWithPDF.AI</title>
+        <meta name="description" content="Contact ChatWithPDF.AI" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -27,10 +27,10 @@ function Contact() {
           titleLineHeight={"42px"}
           py={1}
           pb={10}
-          title={"Welcome to Paraphrasingtool.app"}
+          title={"Welcome to ChatWithPDF.AI"}
           content={[
             "We value your opinion and please provide your feedback, suggestions, and opinions",
-            "Write to us at hello@paraphrasingtool.app",
+            "Write to us at hello@chatwithpdf.ai",
             <b>Address</b>,
             "2925, Manor Bridge Dr Alpharetta, GA 30004",
           ]}

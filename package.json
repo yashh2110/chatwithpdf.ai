@@ -14,12 +14,19 @@
     "@chakra-ui/react": "^2.6.1",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.2",
+    "@react-pdf-viewer/core": "^3.12.0",
+    "@react-pdf-viewer/page-navigation": "^3.12.0",
+    "@react-pdf-viewer/zoom": "^3.12.0",
+    "@reduxjs/toolkit": "^1.9.5",
     "axios": "^1.4.0",
     "draft-js": "^0.11.7",
     "draft-js-export-html": "^1.4.1",
     "framer-motion": "^10.12.12",
+    "i": "^0.3.7",
     "next": "13.4.6",
     "next-share": "^0.20.0",
+    "npm": "^9.7.2",
+    "pdfjs-dist": "^3.4.120",
     "react": "18.2.0",
     "react-code-blocks": "^0.0.9-0",
     "react-dom": "18.2.0",
@@ -28,6 +35,10 @@
     "react-icons": "^4.8.0",
     "react-native-ratings": "^8.1.0",
     "react-pdf": "^7.1.2",
-    "react-simple-star-rating": "^5.1.7"
+    "react-redux": "^8.1.1",
+    "react-simple-star-rating": "^5.1.7",
+    "redux": "^4.2.1",
+    "redux-persist": "^6.0.0",
+    "reduxjs-toolkit-persist": "^7.2.1"
   }
 }
